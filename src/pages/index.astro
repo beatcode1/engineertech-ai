@@ -1,50 +1,271 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineer Tech AI | Manufacturing Test, Automation & AI Solutions</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #102033;
+      }
+
+      header {
+        background: linear-gradient(135deg, #061a33, #0a5bd3);
+        color: white;
+        padding: 90px 24px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 52px;
+        margin: 0;
+      }
+
+      header h2 {
+        font-size: 24px;
+        font-weight: 400;
+        margin: 18px 0;
+      }
+
+      .hero {
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-top: 26px;
+        padding: 12px 20px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.35);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 55px 24px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 35px;
+        color: #4b5b70;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 16px;
+        padding: 26px;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        border-top: 4px solid #0a5bd3;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        color: #0a5bd3;
+      }
+
+      .card p, li {
+        line-height: 1.55;
+        color: #3b4a5c;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .dark {
+        background: #061a33;
+        color: white;
+        text-align: center;
+        padding: 60px 24px;
+      }
+
+      .dark p {
+        max-width: 850px;
+        margin: auto;
+        font-size: 19px;
+        line-height: 1.6;
+      }
+
+      .cta {
+        background: white;
+        text-align: center;
+        border-radius: 18px;
+        padding: 45px 25px;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 18px;
+        background: #0a5bd3;
+        color: white;
+        text-decoration: none;
+        padding: 14px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      footer {
+        background: #061a33;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Engineer Tech AI</h1>
+      <h2>Manufacturing Test, Automation & AI Solutions</h2>
+
+      <p class="hero">
+        Helping electronics manufacturers improve production reliability,
+        automate engineering workflows, and solve complex test challenges.
+      </p>
+
+      <div class="badge">
+        16+ Years Supporting Medical • Aerospace • Defense • High-Reliability Electronics
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h2 class="section-title">Consulting Services</h2>
+        <p class="section-subtitle">
+          Practical engineering support for manufacturing teams that need help with test systems,
+          automation, troubleshooting, documentation, and AI-powered workflow improvement.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Manufacturing Test Engineering</h3>
+            <ul>
+              <li>Production test systems</li>
+              <li>Test process optimization</li>
+              <li>Validation and troubleshooting</li>
+              <li>Production support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>LabVIEW & TestStand</h3>
+            <ul>
+              <li>Automated test development</li>
+              <li>Debugging and support</li>
+              <li>Sequence improvement</li>
+              <li>Test platform modernization</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>PXI & Instrumentation</h3>
+            <ul>
+              <li>PXI troubleshooting</li>
+              <li>Instrumentation support</li>
+              <li>Calibration issue investigation</li>
+              <li>System integration support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Process Automation</h3>
+            <ul>
+              <li>Workflow automation</li>
+              <li>Reporting improvements</li>
+              <li>Documentation systems</li>
+              <li>Manufacturing support tools</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>AI Workflow Integration</h3>
+            <ul>
+              <li>AI-assisted documentation</li>
+              <li>OCR and data extraction</li>
+              <li>Internal knowledge systems</li>
+              <li>Engineering workflow support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Technical Problem Solving</h3>
+            <ul>
+              <li>Root-cause analysis</li>
+              <li>Quality and production support</li>
+              <li>Electronics troubleshooting</li>
+              <li>Class 3 rework experience</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark">
+        <h2>Experience Where Quality, Traceability, and Uptime Matter</h2>
+        <p>
+          Engineer Tech AI brings hands-on experience across regulated and high-reliability
+          electronics manufacturing environments, including medical, aerospace, defense,
+          military, industrial, wireless, and contract manufacturing.
+        </p>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Industries Supported</h2>
+        <p class="section-subtitle">
+          Built for organizations that need dependable engineering support in production,
+          test, automation, and manufacturing operations.
+        </p>
+
+        <div class="grid">
+          <div class="card"><h3>Medical Devices</h3><p>Quality-focused electronics manufacturing environments.</p></div>
+          <div class="card"><h3>Aerospace</h3><p>High-reliability production and test requirements.</p></div>
+          <div class="card"><h3>Defense & Military</h3><p>Demanding electronics and test environments.</p></div>
+          <div class="card"><h3>Class 3 Electronics</h3><p>High-reliability PCB rework and production standards.</p></div>
+          <div class="card"><h3>Industrial Electronics</h3><p>Production, troubleshooting, and process improvement.</p></div>
+          <div class="card"><h3>Contract Manufacturing</h3><p>Support for fast-moving manufacturing teams.</p></div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="cta">
+          <h2>Need Manufacturing Test or Automation Support?</h2>
+          <p>
+            Engineer Tech AI is available for project-based consulting,
+            contract support, and workflow automation initiatives.
+          </p>
+          <a class="button" href="mailto:info@engineertech.ai">Request a Consultation</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Engineer Tech AI © 2026
+    </footer>
+  </body>
 </html>
